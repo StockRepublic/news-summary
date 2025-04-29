@@ -139,4 +139,4 @@ The API returns standard HTTP status codes:
 - The API is stateless - all required information is passed via URL parameters
 - Results are sorted by relevance and recency
 - News content may be available in multiple languages
-- Each news item contains relevance scores to indicate importance 
+- Each news item contains relevance scores to indicate importance
