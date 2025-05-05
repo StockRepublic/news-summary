@@ -18,7 +18,7 @@ curl -H "Authorization: Bearer <token>" https://api.beta.pulse.stockrepublic.io/
 Required credentials:
 - **Bearer token**: Your API token
 
-Although the API is stateless and doesn't store user context between requests, valid authentication credentials must be provided with each request.
+The API is stateless and doesn't store user context between requests, valid authentication credentials must be provided with each request.
 
 ## Demo
 A simple API demo page is available at:
