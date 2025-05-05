@@ -1,47 +1,53 @@
-# News Summary API Documentation
+# News Stories API Documentation
 
 ## Overview
-The News Summary API provides access to curated news summaries related to financial instruments and market sectors. The service processes news articles, extracts key information, and delivers concise summaries.
+The News Stories API provides access to curated news stories related to financial instruments and market sectors. The service processes news articles, extracts key information, and delivers concise summaries.
 
 ## Base URL
 ```
-/v1/news
+https://api.beta.pulse.stockrepublic.io/v1/stories
 ```
 
 ## Authentication
-The API requires HTTP Basic Authentication:
+The API requires Bearer token authentication:
 
 ```
-curl -X GET "https://beta.pulse.stockrepublic.io/v1/news?isin=US88160R1014" -u username:password
+curl -H "Authorization: Bearer 27r39IAjWQhOkjxF46mdfv60GDsgOQLmdO3iw3flN-g" https://api.beta.pulse.stockrepublic.io/v1/stories?isin=LU1778762911
 ```
 
 Required credentials:
-- **Username**: Your API username
-- **Password**: Your API password
+- **Bearer token**: Your API token
 
 Although the API is stateless and doesn't store user context between requests, valid authentication credentials must be provided with each request.
 
+## Demo
+A simple API demo page is available at:
+```
+https://beta.pulse.stockrepublic.io/demo
+```
+Credentials: pulsedemo/newman!
+
 ## Endpoints
 
-### Get News Summaries
-Retrieve news summaries related to specific financial instruments or market sectors.
+### Get News Stories
+Retrieve news stories related to specific financial instruments or market sectors.
 
 #### Request Format
 ```
-GET /v1/news?isin={isin}&sector={sector}
+GET https://api.beta.pulse.stockrepublic.io/v1/stories?isin={isin}&sector={sector}
 ```
 
 #### Parameters
 
 | Parameter | Type | Description | Example |
 |-----------|------|-------------|---------|
-| isin | string | International Securities Identification Number for specific instruments | US88160R1014 |
+| isin | string | International Securities Identification Number for specific instruments | LU1778762911 |
 | sector | string | Market sector identifier | basic-materials |
 | experience_level | integer | Optional user experience level (1-3) | 2 |
 
 Parameters can be repeated for multiple values:
 ```
-/v1/news?isin=US123456781&isin=US132456782&isin=US123456783
+/v1/stories?isin=US123456781&isin=US132456782&isin=US123456783
 ```
 
 #### Response Format
@@ -76,7 +82,7 @@ Parameters can be repeated for multiple values:
 
 #### Example Request
 ```
-GET /v1/news?isin=US88160R1014
+GET https://api.beta.pulse.stockrepublic.io/v1/stories?isin=LU1778762911
 ```
 
 #### Example Response
@@ -139,4 +145,4 @@ The API returns standard HTTP status codes:
 - The API is stateless - all required information is passed via URL parameters
 - Results are sorted by relevance and recency
 - News content may be available in multiple languages
-- Each news item contains relevance scores to indicate importance
+- Each news item contains relevance scores to indicate importance 
