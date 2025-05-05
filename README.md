@@ -25,7 +25,7 @@ A simple API demo page is available at:
 ```
 https://beta.pulse.stockrepublic.io/demo
 ```
-Credentials: pulsedemo/newman!
+Credentials: Your demo credentials
 
 ## Endpoints
 
