@@ -12,7 +12,7 @@ https://api.beta.pulse.stockrepublic.io/v1/stories
 The API requires Bearer token authentication:
 
 ```
-curl -H "Authorization: Bearer 27r39IAjWQhOkjxF46mdfv60GDsgOQLmdO3iw3flN-g" https://api.beta.pulse.stockrepublic.io/v1/stories?isin=LU1778762911
+curl -H "Authorization: Bearer <token>" https://api.beta.pulse.stockrepublic.io/v1/stories?isin=LU1778762911
 ```
 
 Required credentials:
