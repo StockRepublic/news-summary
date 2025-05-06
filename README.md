@@ -43,7 +43,6 @@ GET https://api.beta.pulse.stockrepublic.io/v1/stories?isin={isin}&sector={secto
 |-----------|------|-------------|---------|
 | isin | string | International Securities Identification Number for specific instruments | LU1778762911 |
 | sector | string | Market sector identifier | basic-materials |
-| experience_level | integer | Optional user experience level (1-3) | 2 |
 
 Parameters can be repeated for multiple values:
 ```
